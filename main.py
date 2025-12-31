@@ -7,15 +7,15 @@ import shutil
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from threading import Lock
 
-JSON_FILE = r"C:\\Users\\itsmt\\Documents\\Snapchat\\mydata~1767148268355\\json\\memories_history.json"
-OUTPUT_DIR = r"C:\\Users\\itsmt\\Documents\\Snapchat\\take2"
+JSON_FILE = "./memories_history.json"
+OUTPUT_DIR = "./downloads"
 
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 existing_files = set(os.listdir(OUTPUT_DIR))
 files_lock = Lock()
 
-MAX_WORKERS = 8 
+MAX_WORKERS = 6 
 
 
 def base_name(date_str):
